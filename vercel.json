@@ -1,18 +1,19 @@
 {
-  "build": {
-    "env": {
-      "NEWS_API_KEY": "@news_api_key"  // Using Vercel environment variable reference
-    }
-  },
+  "version": 2,
   "functions": {
     "api/*.js": {
       "runtime": "nodejs18.x"
     }
   },
-  "rewrites": [
+  "routes": [
     {
-      "source": "/api/(.*)",
-      "destination": "/api/$1"
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
     }
-  ]
+  ],
+  "build": {
+    "env": {
+      "NEWS_API_KEY": "your_api_key_here"  
+    }
+  }
 }
