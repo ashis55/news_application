@@ -2,7 +2,7 @@
   "version": 2,
   "functions": {
     "api/*.js": {
-      "runtime": "nodejs18.x"
+      "runtime": "nodejs18.x" 
     }
   },
   "routes": [
@@ -10,10 +10,5 @@
       "src": "/api/(.*)",
       "dest": "/api/$1"
     }
-  ],
-  "build": {
-    "env": {
-      "NEWS_API_KEY": "your_api_key_here"  
-    }
-  }
+  ]
 }
